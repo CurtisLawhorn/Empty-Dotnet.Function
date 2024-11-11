@@ -86,12 +86,12 @@ If already installed check if new version is available.
 
 Execute unit tests
 ```
-    cd "myHelloWorldFunction/test/myHelloWorldFunction.Tests"
+    cd "myDotnetFunction.Function/test"
     dotnet test
 ```
 
 Deploy function to AWS Lambda
 ```
-    cd "myHelloWorldFunction/src/myHelloWorldFunction"
+    cd "myDotnetFunction.Function/src"
     dotnet lambda deploy-function
 ```
