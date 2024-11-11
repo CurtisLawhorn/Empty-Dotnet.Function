@@ -51,6 +51,7 @@ To deploy your function to AWS Lambda, run the below commands from the /hosting/
 
 ```
     terraform init
+    terraform validate
     terraform plan
     terraform apply
     terraform destroy
