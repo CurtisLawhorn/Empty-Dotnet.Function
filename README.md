@@ -8,6 +8,54 @@ You may also have a test project depending on the options selected.
 
 The generated function handler is a simple method accepting a string argument that returns the uppercase equivalent of the input string. Replace the body of this method, and parameters, to suit your needs. 
 
+## Here are some steps to follow from to get started with the Terraform:
+
+The role (production.lambda-execute.role) and policies (below) for Lambda execution and trace logging need to be setup ahead of time.
+
+Lambda execution (AWSLambdaBasicExecutionRole)
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+Trace logging (AWSLambdaTracerAccessExecutionRole)
+```
+{
+    "Version": "2012-10-17",
+    "Statement": {
+        "Effect": "Allow",
+        "Action": [
+            "xray:PutTraceSegments",
+            "xray:PutTelemetryRecords"
+        ],
+        "Resource": [
+            "*"
+        ]
+    }
+}
+```  
+
+To deploy your function to AWS Lambda, run the below commands from the /hosting/src folder and include a .tfvars file for your desired region. 
+
+```
+    terraform init
+    terraform plan
+    terraform apply
+    terraform destroy
+```
+
 ## Here are some steps to follow from Visual Studio:
 
 To deploy your function to AWS Lambda, right click the project in Solution Explorer and select *Publish to AWS Lambda*.
