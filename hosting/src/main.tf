@@ -29,9 +29,9 @@ data "aws_iam_role" "existing_lambda_role" {
 module "lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = "myHelloWorldFunction"
+  function_name = "myDotnetFunction"
   description   = "My lambda function written in .NET"
-  handler       = "myHelloWorldFunction::myHelloWorldFunction.Function::FunctionHandler"
+  handler       = "myDotnetFunction::myDotnetFunction.Function::FunctionHandler"
   runtime       = "dotnet8"
   create_role   = false
   #lambda_role  = aws_iam_role.lambda_role.arn
@@ -64,7 +64,7 @@ module "lambda_function" {
   #}
   
   tags = {
-    Name        = "myHelloWorldFunction"
+    Name        = "myDotnetFunction"
     Environment = "Sandbox"
   }
 }
