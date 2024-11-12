@@ -30,7 +30,7 @@ Lambda execution (AWSLambdaBasicExecutionRole)
 }
 ```
 
-Trace logging (AWSLambdaTracerAccessExecutionRole)
+Trace logging (AWSLambdaTracerAccessExecutionPolicy)
 ```
 {
     "Version": "2012-10-17",
