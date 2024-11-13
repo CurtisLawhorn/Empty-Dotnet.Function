@@ -32,7 +32,7 @@ module "lambda_function" {
 
   function_name = "emptyDotnetFunction"
   description   = "Empty lambda function written in .NET"
-  handler       = "emptyDotnetFunction.Function::emptyDotnetFunction.Function::FunctionHandler"
+  handler       = "emptyDotnetFunction.Function::emptyDotnetFunction.Function.Function::FunctionHandler"
   runtime       = "dotnet8"
   create_role   = false
   #lambda_role  = aws_iam_role.lambda_role.arn
