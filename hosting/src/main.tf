@@ -30,9 +30,9 @@ data "aws_iam_role" "existing_lambda_role" {
 module "lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = "emptyDotnetFunction"
+  function_name = "emptyDotnet-Function"
   description   = "Empty lambda function written in .NET"
-  handler       = "emptyDotnetFunction.Function::emptyDotnetFunction.Function.Function::FunctionHandler"
+  handler       = "emptyDotnet.Function::emptyDotnet.Function.Function::FunctionHandler"
   runtime       = "dotnet8"
   create_role   = false
   #lambda_role  = aws_iam_role.lambda_role.arn
@@ -65,8 +65,9 @@ module "lambda_function" {
   #}
   
   tags = {
-    Name        = "emptyDotnetFunction"
+    Name        = "emptyDotnet-Function"
     Environment = "Sandbox"
+    Repository  = "https://github.com/CurtisLawhorn/emptyDotnet.Function"
   }
 }
 
