@@ -47,7 +47,7 @@ Trace logging (AWSLambdaTracerAccessExecutionPolicy)
 }
 ```  
 
-To deploy your function to AWS Lambda, run the below commands from the /hosting/src folder and include a .tfvars file for your desired region. 
+To deploy your function to AWS Lambda, run the below commands from the /hosting/src folder. 
 
 ```
     terraform init
