@@ -4,6 +4,7 @@
 
 variable "region" {
   type = string
+  default = "us-east-2"
 }
 
 #############################################################################
@@ -29,9 +30,9 @@ data "aws_iam_role" "existing_lambda_role" {
 module "lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = "myDotnetFunction"
-  description   = "My lambda function written in .NET"
-  handler       = "myDotnetFunction::myDotnetFunction.Function::FunctionHandler"
+  function_name = "emptyDotnetFunction"
+  description   = "Empty lambda function written in .NET"
+  handler       = "emptyDotnetFunction.Function::emptyDotnetFunction.Function::FunctionHandler"
   runtime       = "dotnet8"
   create_role   = false
   #lambda_role  = aws_iam_role.lambda_role.arn
@@ -64,7 +65,7 @@ module "lambda_function" {
   #}
   
   tags = {
-    Name        = "myDotnetFunction"
+    Name        = "emptyDotnetFunction"
     Environment = "Sandbox"
   }
 }

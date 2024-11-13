@@ -2,7 +2,7 @@ using Xunit;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.TestUtilities;
 
-namespace myDotnetFunction.Tests;
+namespace emptyDotnetFunction.Tests;
 
 public class FunctionTest
 {

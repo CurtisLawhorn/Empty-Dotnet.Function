@@ -87,12 +87,12 @@ If already installed check if new version is available.
 
 Execute unit tests
 ```
-    cd "myDotnetFunction.Function/test"
+    cd "emptyDotnetFunction.Function/test"
     dotnet test
 ```
 
 Deploy function to AWS Lambda
 ```
-    cd "myDotnetFunction.Function/src"
+    cd "emptyDotnetFunction.Function/src"
     dotnet lambda deploy-function
 ```
