@@ -16,7 +16,7 @@ public class Function
     /// <returns></returns>
     public string FunctionHandler(string input, ILambdaContext context)
     {
-        LambdaLogger.Log($"FunctionHandler: input={input}");
+        context.Logger.Log($"FunctionHandler: input={input}");
         return input.ToUpper();
     }
 }
