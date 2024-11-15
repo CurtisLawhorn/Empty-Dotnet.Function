@@ -31,7 +31,7 @@ module "lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
   function_name = "emptyDotnet-Function"
-  description   = "Empty lambda function written in .NET"
+  description   = "Empty function."
   handler       = "emptyDotnet.Function::emptyDotnet.Function.Function::FunctionHandler"
   runtime       = "dotnet8"
   create_role   = false
