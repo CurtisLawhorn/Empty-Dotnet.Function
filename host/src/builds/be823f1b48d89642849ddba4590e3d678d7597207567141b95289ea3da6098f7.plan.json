@@ -1,0 +1,1 @@
+{"filename": "builds/be823f1b48d89642849ddba4590e3d678d7597207567141b95289ea3da6098f7.zip", "runtime": "dotnet8", "artifacts_dir": "builds", "build_plan": [["sh", "../../src", "dotnet restore\ndotnet publish -c Release -r linux-arm64 -o publish\ncd ./publish"], ["zip:embedded", "../../src", null]]}

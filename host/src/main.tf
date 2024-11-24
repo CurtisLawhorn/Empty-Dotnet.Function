@@ -31,7 +31,7 @@ module "lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
   function_name = "emptyDotnet"
-  description   = "AWS Lambda function for training purposes using the 'serverless.EmptyServerless' template."
+  description   = "Empty function for training purposes using the 'serverless.EmptyServerless' template."
   handler       = "emptyDotnet.Function::emptyDotnet.Function.Function::FunctionHandler"
   runtime       = "dotnet8"
   create_role   = false
