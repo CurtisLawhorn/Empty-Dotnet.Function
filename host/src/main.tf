@@ -30,9 +30,9 @@ data "aws_iam_role" "existing_lambda_role" {
 module "lambda_function" {
   source = "terraform-aws-modules/lambda/aws"
 
-  function_name = "emptyDotnet"
+  function_name = "Empty-Dotnet"
   description   = "Empty function for training purposes using the 'serverless.EmptyServerless' template."
-  handler       = "emptyDotnet.Function::emptyDotnet.Function.Function::FunctionHandler"
+  handler       = "Empty-Dotnet.Function::Empty_Dotnet.Function.Function::FunctionHandler"
   runtime       = "dotnet8"
   create_role   = false
   #lambda_role  = aws_iam_role.lambda_role.arn
